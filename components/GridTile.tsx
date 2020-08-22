@@ -6,7 +6,6 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import Color from "../constants/color";
 
 const data = [
   { id: 1, title: "Panchayat Level Review Planning Meeting" },
@@ -21,7 +20,7 @@ const data = [
 
 const _renderGridItem = (gridItem: any) => {
   return (
-    <TouchableOpacity style={styles.gridItem}>
+    <TouchableOpacity activeOpacity={0.8} style={styles.gridItem}>
       <View style={styles.container}>
         <Text style={styles.title}>{gridItem.item.title}</Text>
       </View>
@@ -43,8 +42,8 @@ export default (props: any) => {
 const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
-    margin: 20,
-    height: 150,
+    margin: 10,
+    height: 100
   },
   container: {
     flex: 1,
@@ -53,8 +52,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     elevation: 1.5,
+    backgroundColor: '#ccc'
   },
   title: {
+    fontSize: 16,
     fontWeight: "900",
     textAlign: 'center'
   },

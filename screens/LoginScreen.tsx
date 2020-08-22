@@ -42,22 +42,22 @@ export default (props: any) => {
   return (
     <View style={styles.screen}>
       <View style={styles.loginContainer}>
-        <Text style={{ alignSelf: "center", fontSize: 48, fontWeight: "600" }}>
-          Login
+        <Text style={{ alignSelf: "center", textAlign: 'center', fontSize: 48, fontWeight: "600", marginVertical: 50 }}>
+          SAMVAD Login
         </Text>
         <View>
-          <Input placeholder="Username" />
+          <Input style={{ fontSize: 18 }} placeholder="Username" />
         </View>
         <View>
           <Input placeholder="Password" secureTextEntry={true} />
         </View>
-        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+        <View style={{ flexDirection: "row", justifyContent: "center", marginVertical: 20 }}>
           <View style={{ width: "50%" }}>
             <Button title="Login" color={Color.primary} onPress={handleClick} />
           </View>
         </View>
         <View style={styles.loader}>
-          <ActivityIndicator color={Color.primary} />
+          <ActivityIndicator color={Color.primary} animating={false}/>
         </View>
       </View>
     </View>
